@@ -10,7 +10,7 @@ use Matteomcr\BrawlstarProject\Models\Brawler;
 
 class CharacterController extends BaseController{
 
-    public function showCharacterPage(ServerRequestInterface $request, ResponseInterface $response, array $args) : ResponseInterface
+    public function showAllBrawlers(ServerRequestInterface $request, ResponseInterface $response, array $args) : ResponseInterface
     {
         $brawlersData = Brawler::fetchAll();
         
@@ -18,5 +18,16 @@ class CharacterController extends BaseController{
             'allBrawlers' => $brawlersData
         ]);
     }
+
+    public function showDetailBrawler(ServerRequestInterface $request, ResponseInterface $response, array $args) : ResponseInterface
+    {
+        $brawlersData = Brawler::fetchAll();
+        
+        return $this->view->render($response, 'test.php', [
+            'allBrawlers' => $brawlersData
+        ]);
+    }
+
+    public
    
 }
