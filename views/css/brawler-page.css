@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.brawler-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.brawler-image {
+    width: 200px;
+    object-fit: cover;
+}
+
+.brawler-info {
+    padding: 20px;
+}
+
+.brawler-info h2 {
+    margin-top: 0;
+}
+
+.brawler-description {
+    font-size: 14px;
+}
+
+.brawler-class, .brawler-rarity {
+    font-weight: bold;
+}
+
+.brawler-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.brawler-powers {
+    margin-top: 20px;
+}
+
+.power {
+    display: flex;
+    align-items: center;
+}
+
+.power img {
+    width: 50px;
+    margin-right: 10px;
+}

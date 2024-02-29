@@ -8,8 +8,8 @@
 <body>
     <header>
         <nav>
-            <li>Accueil</li>
-            <li>Qui es est ton brawleur ?</li>
+            <!-- <li>Accueil</li>
+            <li>Qui es est ton brawleur ?</li> -->
             
         </nav>
     </header>

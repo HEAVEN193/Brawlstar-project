@@ -14,20 +14,28 @@ class CharacterController extends BaseController{
     {
         $brawlersData = Brawler::fetchAll();
         
-        return $this->view->render($response, 'test.php', [
-            'allBrawlers' => $brawlersData
+        return $this->view->render($response, 'brawler-page.php', [
+            'allBrawlers' => $brawlersData->list
         ]);
     }
 
     public function showDetailBrawler(ServerRequestInterface $request, ResponseInterface $response, array $args) : ResponseInterface
     {
-        $brawlersData = Brawler::fetchAll();
+        $id = $args['id'];
+        $brawlersData = Brawler::fetchById($id);
         
         return $this->view->render($response, 'test.php', [
-            'allBrawlers' => $brawlersData
+            'brawler' => $brawlersData
         ]);
     }
 
-    public
+    // public function showDetailBrawler(ServerRequestInterface $request, ResponseInterface $response, array $args) : ResponseInterface
+    // {
+    //     $brawlersData = Brawler::fetchAll();
+        
+    //     return $this->view->render($response, 'test.php', [
+    //         'allBrawlers' => $brawlersData
+    //     ]);
+    // }
    
 }

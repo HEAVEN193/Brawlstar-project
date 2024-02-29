@@ -37,11 +37,10 @@ class Brawler {
                     $brawlers[] = $brawler; // Ajouter l'objet brawler au tableau
                 }
             }
-    
             curl_close($curl);
         }
     
-        return $brawlers; // Retourner la liste des objets brawler
+        return $brawlers; 
     }
     
 }
